@@ -12,7 +12,7 @@ from deployer import GAEDeployer
 
 parser = argparse.ArgumentParser(prog='GAE Deployment CLI')
 
-parser.add_argument('--build_path', required=True,
+parser.add_argument('--build_path', default="",
                     help='location of current build path, relative to shell script')
 
 parser.add_argument('--gae_path', default=None,
