@@ -12,19 +12,19 @@ from deployer import GAEDeployer
 
 parser = argparse.ArgumentParser(prog='GAE Deployment CLI')
 
-parser.add_argument('--build_path', default="",
+parser.add_argument('-p', '--build_path', default="./",
                     help='location of current build path, relative to shell script')
 
 parser.add_argument('--gae_path', default=None,
                     help='Path to GAE Python SDK')
 
-parser.add_argument('--app', required=True,
+parser.add_argument('-A', '--app', required=True,
                     help='The GAE App being Deployed (e.g. <app-name>.appspot.com)')
 
-parser.add_argument('--app_version', required=True,
+parser.add_argument('-V', '--app_version', required=True,
                     help='The GAE app version to use in app.yaml')
 
-parser.add_argument('--modules', nargs='*', default=[],
+parser.add_argument('-m', '--modules', nargs='*', default=[],
                     help='the GAE Modules. More than one can be listed (e.g. app.yaml)')
 
 parser.add_argument('-v', '--verbose',
