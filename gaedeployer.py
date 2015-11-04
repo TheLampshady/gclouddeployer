@@ -24,7 +24,7 @@ parser.add_argument('-A', '--app', required=True,
 parser.add_argument('-V', '--app_version', required=True,
                     help='The GAE app version to use in app.yaml')
 
-parser.add_argument('-m', '--modules', nargs='*', default=[],
+parser.add_argument('--modules', nargs='*', default=[],
                     help='the GAE Modules. More than one can be listed (e.g. app.yaml)')
 
 parser.add_argument('-v', '--verbose',
